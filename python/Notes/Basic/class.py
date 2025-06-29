@@ -19,5 +19,12 @@ class office:
         employee.skills=skills
     def display(employee):
         print(f"Name:{employee.name}\nEmail:{employee.email}\nPhone:{employee.phone}\nPlace:{employee.place}\nId:{employee.employee_id}\nSkill:{ employee.skills}")
+class student:
+    def __init__(self, name, age, place):
+        self.name = name
+        self.age = age
+        self.place=place
+    def display(self):
+        super(). __init__(name,email,phone,place)
 ofe=office("yokesh","abc123@.gmail.com",9876543210,"myd","ABC002","Python")
 ofe.display()
