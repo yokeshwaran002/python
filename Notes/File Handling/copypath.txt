@@ -1,0 +1,9 @@
+Withdraw=int(input("Enter the amount to withdraw:"))
+if Withdraw>Balance:
+    print("Insufficient Balance")
+else:
+    Balance-=Withdraw
+    print("Your new Balance is:", Balance)
+    Bank=open("Bank.txt","a")
+    Bank.write(str(Account_Number)+"\t"+str(Balance)+"\n")
+    Bank.close()

@@ -1,0 +1,15 @@
+from tkinter import *
+root=Tk()
+root.geometry("400x400")
+l=Label(root,text="i'm shaariq from mayiladuthurai ")
+m=Label(root,text="I have completed my schooling at Alagu Jothi Academy ")
+n=Label(root,text="I have completed my diploma in computer engineering at elumalaiyan polytechnic college at kollumangudi ")
+o=Label(root,text=" after I joined my BE in computer science and engineering in A.V.C college of engineering in mayiladuthurai")
+l.pack()
+m.pack()
+n.pack()
+f=Frame(root,width=70,height=50,background="blue")
+f.pack()
+o.pack()
+
+root.mainloop()
