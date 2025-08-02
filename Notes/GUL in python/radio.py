@@ -13,6 +13,7 @@ r1.pack()
 r2=Radiobutton(root,variable=var,value=2,text="Female")
 r2.pack()
 
+
 def submit():
     a=var.get()
     if a==1:
@@ -27,4 +28,4 @@ def submit():
 b=Button(root,text="Submit",command=submit)
 b.pack()
 
-root.mainloop()
+mainloop()

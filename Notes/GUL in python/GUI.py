@@ -122,9 +122,9 @@ f4 = Label(root, text="black")
 f4.grid(row=4,column=0)
 f4=Frame(root,width=100,height=50,background="black")
 f4.grid(row=4,column=1)
-root.mainloop()'''
+root.mainloop()
 
-'''from tkinter import *
+from tkinter import *
 root=Tk()
 root.title("for loop")
 root.geometry("500x400")
@@ -147,7 +147,7 @@ b.place(x=169,y=10)
 
 r.mainloop()'''
 
-from tkinter import *
+'''from tkinter import *
 root=Tk()
 root.title("Button")
 root.geometry("500x400")
@@ -168,5 +168,111 @@ def submit():
 
 button = Button(root,text="Submit",command=submit)
 button.pack()
-mainloop()
+mainloop()'''
 
+
+
+#combo box
+
+'''from tkinter import *
+from tkinter import ttk
+from tkinter import messagebox
+
+root = Tk()
+root.geometry("300x200")
+
+
+l = ttk.Label(root, text="Select option")
+l.place(x=10, y=10)
+
+
+options = ["select", "tamilnadu", "kerala", "karnataka", "andhra"]
+
+
+combobox = ttk.Combobox(root, values=options, state="readonly")
+combobox.place(x=120, y=10)
+combobox.set(options[0])
+
+
+def submit():
+    selected = combobox.get()
+    if selected == "tamilnadu":
+        print("tamilnadu")
+    elif selected == "kerala":
+        print("kerala")
+    elif selected == "karnataka":
+        print("karnataka")
+    elif selected == "andhra":
+        print("andhra")
+    else:
+        messagebox.showinfo("Error", "Please select a valid option")
+
+button = Button(root, text="Submit", command=submit)
+button.place(x=120, y=50)
+
+root.mainloop()'''
+
+
+
+'''
+#adding image
+
+from tkinter import *
+from PIL import Image, ImageTk
+
+root=Tk()
+root.title("Image")
+
+bimage=Image.open("backdrop.png")
+bphoto=ImageTk.PhotoImage(bimage.resize((500,400)))
+
+
+l=Label(root,image=bphoto)
+l.place(x=10,y=10,relwidth=1,relheight=1)
+
+root.mainloop()'''
+
+from tkinter import *
+from tkinter import messagebox
+from PIL import Image, ImageTk
+
+def submit_action():
+    user_name = t1.get()
+    user_age = t2.get()
+    if not user_name or not user_age:
+        messagebox.showwarning("Input Error", "Please fill out all fields.")
+    else:
+        messagebox.showinfo("Submitted", f"Name: {user_name}\nAge: {user_age}")
+
+root = Tk()
+root.title("Image")
+root.geometry("800x500")
+
+#background
+br_image = Image.open("backdrop.png")
+br_photo = ImageTk.PhotoImage(br_image.resize((800, 500)))
+
+l = Label(root, image=br_photo)
+l.place(x=0, y=0, relwidth=1, relheight=1)
+
+#Name 
+name = Label(root, text="Name", bg="white")
+name.place(x=500, y=150)
+t1 = Entry(root)
+t1.place(x=550, y=151)
+
+#Age 
+age = Label(root, text="Age", bg="white")
+age.place(x=500, y=200)
+t2 = Entry(root)
+t2.place(x=550, y=201)
+
+#button
+buoton_var = IntVar()
+buoton_cb = Checkbutton(root, text="i not robot", variable=buoton_var, bg="white")
+buoton_cb.place(x=550, y=230)
+
+button = Button(root, text="Submit", command=submit_action)
+button.place(x=550, y=300)
+
+root.mainloop()

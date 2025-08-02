@@ -19,6 +19,10 @@ age.grid(row=1,column=0)
 t2 = Entry(root)
 t2.grid(row=1,column=1)
 
+agree_var = IntVar()
+agree_cb = Checkbutton(root, text="i not robot", variable=agree_var, bg="white")
+agree_cb.place(x=500, y=230)
+
 var=IntVar()
 gender= Label(root, text="gender:-")
 gender.grid(row=2,column=0)
@@ -29,39 +33,43 @@ r2=Radiobutton(root,variable=var,value=2,text="Female")
 r2.grid(row=6,column=1)
 def submit():
     a = (t1.get(), t2.get(), var1.get())
-    print(a)
     if var1.get() == 1:
         print(a)
 var1=IntVar()
+course= Label(root, text="course:-")
+course.grid(row=7,column=0)
 
 r1=Checkbutton(root,variable=var1,text="python course")
-r1.grid(row=7,column=0)
+r1.grid(row=8,column=1)
 
 var2=IntVar()
 
 r2=Checkbutton(root,variable=var2,text="java course")
-r2.grid(row=8,column=0)
+r2.grid(row=9,column=1)
 
 var3=IntVar()
 
 r3=Checkbutton(root,variable=var3,text="c++ course")
-r3.grid(row=9,column=0)
+r3.grid(row=10,column=1)
 
 var4=IntVar()
 r4=Checkbutton(root,variable=var4,text="c# course")
-r4.grid(row=10,column=0)
+r4.grid(row=11,column=1)
 def submit():
-    a = (t1.get(), t2.get(), var.get(), var1.get(), var2.get(), var3.get(), var4.get())
+    a = t1.get(), t2.get()
+    b= var.get()
+    c= var1.get(),var2.get(), var3.get(), var4.get()
     print(a)
-    if var.get() == 1:
-        print(a)
-    elif var.get() == 2:
-        print(a)
+    if b == 1:
+        print("Male")
+    elif b== 2:
+        print("Female")
     else:
         messagebox.showinfo("Error", "Please select option")
+    print(c)
 
 b=Button(root,text="Submit",command=submit)
-b.grid(row=11,column=0)
+b.grid(row=12,column=1)
 
 
 mainloop()
