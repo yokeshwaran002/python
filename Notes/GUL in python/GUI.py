@@ -173,8 +173,8 @@ mainloop()'''
 
 
 #combo box
-
-'''from tkinter import *
+'''
+from tkinter import *
 from tkinter import ttk
 from tkinter import messagebox
 
@@ -231,7 +231,8 @@ l=Label(root,image=bphoto)
 l.place(x=10,y=10,relwidth=1,relheight=1)
 
 root.mainloop()'''
-
+# add image
+'''
 from tkinter import *
 from tkinter import messagebox
 from PIL import Image, ImageTk
@@ -275,4 +276,6 @@ buoton_cb.place(x=550, y=230)
 button = Button(root, text="Submit", command=submit_action)
 button.place(x=550, y=300)
 
-root.mainloop()
+root.mainloop()'''
+
+
