@@ -1,17 +1,17 @@
 #open("Bank.txt","x")
 
-'''Bank=open("Bank.txt","a")
+Bank=open("Bank.txt","a")
 Bank.write("Account Number\tBalance\n")
 Bank.close()'''
 #register
-'''
+
 Bank=open("Bank.txt","a")
 Account_Number=int(input("Enter the Account Number:"))
 Balance=int(input("Enter the Balance:"))
 Bank.write(str(Account_Number)+"\t"+str(Balance)+"\n")
 Bank.close()'''
 #login
-'''
+
 Account_Number=int(input("Enter the Account Number:"))
 Bank=open("Bank.txt","r")
 for line in Bank:
@@ -24,9 +24,9 @@ for line in Bank:
 else:
         print("Account Number not found")
 
-Bank.close()'''
+Bank.close()
 #withdraw
-'''
+
 Account_Number=int(input("Enter the Account Number:"))
 Bank=open("Bank.txt","r")
 for line in Bank:
@@ -47,7 +47,7 @@ else:
 Bank=open("Bank.txt","w")
 Bank.write("Account Number\tBalance\n")
 Bank.write(str(Account_Number)+"\t"+str(Balance)+"\n")
-Bank.close()'''
+Bank.close()
 #deposit
 
 Account_Number=int(input("Enter the Account Number:"))
